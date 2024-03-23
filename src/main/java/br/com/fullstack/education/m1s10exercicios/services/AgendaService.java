@@ -16,8 +16,12 @@ public interface AgendaService {
 
     void excluir(Long id);
 
-    AgendaEntity buscarPorAlunoId(Long alunoId);
+    List<AgendaEntity> buscarPorAlunoId(Long alunoId);
 
-    AgendaEntity buscarPorTutorId(Long tutorId);
+    List<AgendaEntity> buscarProximosPorAlunoId(Long alunoId);
+
+    List<AgendaEntity> buscarPorTutorId(Long tutorId);
+
+    List<AgendaEntity> buscarProximosPorTutorId(Long tutorId);
 
 }
